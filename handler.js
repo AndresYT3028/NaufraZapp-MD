@@ -1349,7 +1349,7 @@ ${user.bannedReason}` : '*Motivo:* Sin Especificar'}
           }
           if (m.limit) {
           /* ❒═════════════════◊【】◊═════════════════❒ */
-            m.reply('> ⓘ 𝙎𝙚 𝙝𝙖𝙣 𝙪𝙨𝙖𝙙𝙤: ' + +m.limit + ' 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚𝙨.');
+            m.reply('> ⓘ 𝙎𝙚 𝙝𝙖𝙣 𝙪𝙨𝙖𝙙𝙤: ' + +m.limit + ' 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚(𝙨).');
           }
         }
         break;
@@ -1455,7 +1455,7 @@ export async function participantsUpdate({id, participants, action}) {
             const userPrefix = antiArab.some((prefix) => user.startsWith(prefix));
             const botTt2 = groupMetadata.participants.find((u) => m.conn.decodeJid(u.id) == m.conn.user.jid) || {};
             const isBotAdminNn = botTt2?.admin === 'admin' || false;
-            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
+            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'No hay descripción') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]);
             if (userPrefix && chat.antiArab && botTt.restrict && isBotAdminNn && action === 'add') {
               const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
@@ -1521,7 +1521,7 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `𝙷𝚘𝚕𝚊 *@${nk.from.split('@')[0]}*, 𝚕𝚊𝚜 ${nk.isVideo ? '𝚟𝚒𝚍𝚎𝚘𝚕𝚕𝚊𝚖𝚊𝚍𝚊s' : '𝚕𝚕𝚊𝚖𝚊𝚍𝚊s'} 𝚗𝚘 𝚎𝚜𝚝𝚊́𝚗 𝚙𝚎𝚛𝚖𝚒𝚝𝚒𝚍𝚊𝚜, 𝚜𝚎𝚛𝚊́𝚜 𝚋𝚕𝚘𝚚𝚞𝚎𝚊𝚍𝚘.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣;;;\nFN:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nORG:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nTITLE:\nitem1.TEL;waid=5493873687620:+54 9 3873 68-7620\nitem1.X-ABLabel:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nX-WA-BIZ-DESCRIPTION:𝘾𝙤𝙣𝙩𝙖𝙘𝙩𝙖𝙢𝙚 𝙨𝙞 𝙩𝙞𝙚𝙣𝙚𝙨 𝙙𝙪𝙙𝙖𝙨.\nX-WA-BIZ-NAME:Creador 🧸\nEND:VCARD`;
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣;;;\nFN:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nORG:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nTITLE:\nitem1.TEL;waid=5493873687620:+54 9 3873 68-7620\nitem1.X-ABLabel:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nX-WA-BIZ-DESCRIPTION:𝘾𝙤𝙣𝙩𝙖𝙘𝙩𝙖𝙢𝙚 𝙨𝙞 𝙩𝙞𝙚𝙣𝙚𝙨 𝙙𝙪𝙙𝙖𝙨.\nX-WA-BIZ-NAME:𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣\nEND:VCARD`;
         await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
@@ -1561,11 +1561,11 @@ global.dfail = (type, m, conn) => {
     private: '> ⓘ 𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤, 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙙𝙤 𝙚𝙣 𝙘𝙝𝙖𝙩𝙨 𝙥𝙧𝙞𝙫𝙖𝙙𝙤𝙨.',
     admin: '> ⓘ 𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤, 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙙𝙤 𝙥𝙤𝙧 𝙖𝙙𝙢𝙞𝙣𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤.',
     botAdmin: '> ⓘ 𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤, 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙙𝙤 𝙨𝙞 𝙚𝙡 𝙗𝙤𝙩 𝙚𝙨 𝙖𝙙𝙢𝙞𝙣.',
-    unreg: '> ⓘ 𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙚 𝙧𝙚𝙦𝙪𝙞𝙚𝙧𝙚 𝙪𝙣 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙤 𝙥𝙖𝙧𝙖 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙧𝙡𝙤, 𝙪𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n\n> #verificar nombre.edad\n\n#verificar Naufrago.19',
-    restrict: '*!Esta Función Fué Deshabilitado Por Mi Desarrollador*',
+    unreg: '> ⓘ 𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙚 𝙧𝙚𝙦𝙪𝙞𝙚𝙧𝙚 𝙪𝙣 𝙧𝙚𝙜𝙞𝙨𝙩𝙧𝙤 𝙥𝙖𝙧𝙖 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙧𝙡𝙤, 𝙪𝙨𝙚 𝙚𝙡 𝙘𝙤𝙢𝙖𝙣𝙙𝙤:\n\n> #verificar \`nombre.edad\`\n\n> #verificar \`Naufrago.19\`',
+    restrict: '> ⓘ 𝙀𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙨𝙤𝙡𝙤 𝙥𝙪𝙚𝙙𝙚 𝙨𝙚𝙧 𝙚𝙟𝙚𝙘𝙪𝙩𝙖𝙙𝙤 𝙥𝙤𝙧 𝙚𝙡 𝙘𝙧𝙚𝙖𝙙𝙤𝙧 𝙙𝙚𝙡 𝙗𝙤𝙩.',
     }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '♨️ 𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥 𝘽𝙤𝙩 ♨️', body: '𝑵𝒂𝒖𝒇𝒓𝒂𝒁𝒂𝒑𝒑-𝑴𝑫', thumbnail: imagen1, sourceUrl: 'https://youtube.com/@user-bw5wl4ye8r'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '✰ 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿 ✰', body: '༆༄𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝑩𝒐𝒕 / 𝑰𝑨 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑༆༄', thumbnail: imagen1, sourceUrl: 'https://youtube.com/@user-bw5wl4ye8r'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 /* ❒═════════════════◊【】◊═════════════════❒ */

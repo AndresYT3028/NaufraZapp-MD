@@ -4,31 +4,36 @@ const handler = async (m, {conn, args, usedPrefix, __dirname}) => {
   const imgr = flaaa.getRandom();
   const _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch((_) => ({}))) || {};
   const user = global.db.data.users[m.sender];
-  if (user.health >= 100) return conn.reply(m.chat, `*𝚃𝚄 𝚂𝙰𝙻𝚄𝙳 𝙴𝚂𝚃𝙰 𝙻𝙻𝙴𝙽𝙰 ❤️*\n\nSALUD: ${user.health}`, m);
+  if (user.health >= 100) return conn.reply(m.chat, `> *❲ ❤️ VIDA/SALUD ❤️ ❳*\n> ▰▰▰▰▰▰▰▰▰▰ ❬ ${user.health}% ❭\n\n> *Tu salud esta llena, ahora ve a lastimarte xd`, m);
   /* conn.sendButton(m.chat, `𝚃𝚄 𝚂𝙰𝙻𝚄𝙳 𝙴𝚂𝚃𝙰 𝙻𝙻𝙴𝙽𝙰 ❤️`, wm, imgr + `SALUD: ${user.health}`, [
 [`🏕️ 𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰𝚁`, `${usedPrefix}adventure`]], m)*/
   const heal = 40 + (user.cat * 4);
   const count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0]) || Math.round((90 - user.health) / heal)))) * 1;
   if (user.potion < count) {
-    return conn.reply(m.chat, `*${htki} 𝚂𝙸𝙽 𝙿𝙾𝙲𝙸𝙾𝙽𝙴𝚂 ${htka}\n\n𝙽𝙴𝙲𝙴𝚂𝙸𝚃𝙰𝚂 ${count - user.potion} 𝙿𝙾𝙲𝙸𝙾𝙽 🥤 𝙿𝙰𝚁𝙰 𝙲𝚄𝚁𝙰𝚁𝚃𝙴
-𝚂𝙰𝙻𝚄𝙳 » ${user.health} ❤️
-𝙿𝙾𝙲𝙸𝙾𝙽 » ${user.potion} 🥤
-𝙲𝙾𝙼𝙿𝚁𝙰 𝙿𝙾𝙲𝙸𝙾𝙽 𝙾 𝙿𝙸𝙳𝙴𝙻𝙴 𝙰 𝙰𝙻𝙶𝚄𝙸𝙴𝙽 𝚀𝚄𝙴 𝚃𝙴 𝚃𝚁𝙰𝙽𝚂𝙵𝙸𝙴𝚁𝙰`, m);
+    return conn.reply(m.chat, `> *${htki} Sin pociones ${htka}\n\n> Necesitas exactamente: ${count - user.potion} pociones para curarte.
+
+> 𝙑𝙄𝘿𝘼/𝙎𝘼𝙇𝙐𝘿:
+> ${user.health} ♥︎
+
+> 𝙋𝙊𝘾𝙄𝙊𝙉:
+> ${user.potion} ❣︎
+
+> ⓘ Puedes comprar pociones, o tambien solicitar una transferencia...`, m);
   }
   /* conn.sendButton(m.chat,`${htki} 𝚂𝙸𝙽 𝙿𝙾𝙲𝙸𝙾𝙽𝙴𝚂 ${htka}`,
-`𝙽𝙴𝙲𝙴𝚂𝙸𝚃𝙰𝚂 ${count - user.potion} 𝙿𝙾𝙲𝙸𝙾𝙽 🥤 𝙿𝙰𝚁𝙰 𝙲𝚄𝚁𝙰𝚁𝚃𝙴
-𝚂𝙰𝙻𝚄𝙳 » ${user.health} ❤️
-𝙿𝙾𝙲𝙸𝙾𝙽 » ${user.potion} 🥤
+`𝙽𝙴𝙲𝙴𝚂𝙸𝚃𝙰𝚂 ${count - user.potion} 𝙿𝙾𝙲𝙸𝙾𝙽  𝙿𝙰𝚁𝙰 𝙲𝚄𝚁𝙰𝚁𝚃𝙴
+𝚂𝙰𝙻𝚄𝙳 » ${user.health} 
+𝙿𝙾𝙲𝙸𝙾𝙽 » ${user.potion} 
 𝙲𝙾𝙼𝙿𝚁𝙰 𝙿𝙾𝙲𝙸𝙾𝙽 𝙾 𝙿𝙸𝙳𝙴𝙻𝙴 𝙰 𝙰𝙻𝙶𝚄𝙸𝙴𝙽 𝚀𝚄𝙴 𝚃𝙴 𝚃𝚁𝙰𝙽𝚂𝙵𝙸𝙴𝚁𝙰`.trim(), imgr + 'POCION BAJA', [
-[`𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙿𝙾𝙲𝙸𝙾𝙽 🥤`, `${usedPrefix}buy potion ${count - user.potion}`],
-[`𝙿𝙴𝙳𝙸𝚁 𝙰𝚈𝚄𝙳𝙰 📣`, `${usedPrefix}pedirayuda *Por Favor alguien ayudeme con ${count - user.potion} de POCION* 🥤
+[`𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙿𝙾𝙲𝙸𝙾𝙽 `, `${usedPrefix}buy potion ${count - user.potion}`],
+[`𝙿𝙴𝙳𝙸𝚁 𝙰𝚈𝚄𝙳𝙰 `, `${usedPrefix}pedirayuda *Por Favor alguien ayudeme con ${count - user.potion} de POCION* 
 *» AYUDA TRANSFIRIENDO:*
 *${usedPrefix}transfer potion ${count - user.potion}* @${conn.getName(m.sender)}`]], m)*/
   user.potion -= count * 1; // 1 potion = count (1)
   user.health += heal * count;
-  conn.reply(m.chat, `**━┈━《 ✅ 𝚂𝙰𝙻𝚄𝙳 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙰 》━┈━*\n\n𝙴𝚇𝙸𝚃𝙾𝚂𝙰𝙼𝙴𝙽𝚃𝙴 𝚄𝚂𝙾 ${count} 𝙳𝙴 𝙿𝙾𝙲𝙸𝙾𝙽 🥤 𝙿𝙰𝚁𝙰 𝚁𝙴𝙲𝚄𝙿𝙴𝚁𝙰𝚁 𝚂𝚄 𝚂𝙰𝙻𝚄𝙳\n\𝚗𝚂𝙰𝙻𝚄𝙳 » ${user.health} ❤\n\nSALUD COMPLETADA`, m);
+  conn.reply(m.chat, `> ⓘ ¡¡Tu salud esta completa!!\n\n> Usaste: ${count} de pocion oara recuperar tu vida.\n\n> Tu vida/salud: ${user.health} \n\nNaufraZapp-MD`, m);
 };
-/* conn.sendButton(m.chat, `*━┈━《 ✅ 𝚂𝙰𝙻𝚄𝙳 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙰 》━┈━*`, `𝙴𝚇𝙸𝚃𝙾𝚂𝙰𝙼𝙴𝙽𝚃𝙴 𝚄𝚂𝙾 ${count} 𝙳𝙴 𝙿𝙾𝙲𝙸𝙾𝙽 🥤 𝙿𝙰𝚁𝙰 𝚁𝙴𝙲𝚄𝙿𝙴𝚁𝙰𝚁 𝚂𝚄 𝚂𝙰𝙻𝚄𝙳\n\𝚗𝚂𝙰𝙻𝚄𝙳 » ${user.health} ❤️`, imgr + 'SALUD COMPLETADA', [
+/* conn.sendButton(m.chat, `*━┈━《 ✅ 𝚂𝙰𝙻𝚄𝙳 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙰 》━┈━*`, `𝙴𝚇𝙸𝚃𝙾𝚂𝙰𝙼𝙴𝙽𝚃𝙴 𝚄𝚂𝙾 ${count} 𝙳𝙴 𝙿𝙾𝙲𝙸𝙾𝙽 𝙿𝙰𝚁𝙰 𝚁𝙴𝙲𝚄𝙿𝙴𝚁𝙰𝚁 𝚂𝚄 𝚂𝙰𝙻𝚄𝙳\n\𝚗𝚂𝙰𝙻𝚄𝙳 » ${user.health} `, imgr + 'SALUD COMPLETADA', [
 [`𝙰𝚅𝙴𝙽𝚃𝚄𝚁𝙰𝚁 🏕️`, `${usedPrefix}adventure`]], m)*/
 handler.help = ['heal'];
 handler.tags = ['rpg'];
@@ -38,4 +43,5 @@ function isNumber(number) {
   if (!number) return number;
   number = parseInt(number);
   return typeof number == 'number' && !isNaN(number);
-}
+                     }
+                                                               

@@ -3,8 +3,8 @@ let time = global.db.data.users[m.sender].lastcofre + 0 // 36000000 10 Horas //8
 if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`
 
 let img = 'https://telegra.ph/file/fd6eea95ade105a2d8273.png'
-let dia = Math.floor(Math.random() * 30)
-let tok = Math.floor(Math.random() * 10)
+let dia = Math.floor(Math.random() * 500)
+let tok = Math.floor(Math.random() * 400)
 let hadesb = Math.floor(Math.random() * 4000)
 let expp = Math.floor(Math.random() * 5000)
 
@@ -13,7 +13,7 @@ let expp = Math.floor(Math.random() * 5000)
   global.db.data.users[m.sender].joincount += tok
   global.db.data.users[m.sender].exp += expp
 
-let texto = `🧸 𝖤𝗌𝗍𝖾 𝖤𝗋𝖺 𝖫𝖺 𝖨𝗆𝖺𝗀𝖾𝗇 𝖠𝗇𝗍𝗂𝗀𝗎𝖺 𝖣𝖾𝗅 𝖡𝗈𝗍 📍`
+let texto = `> ❮🎊 𝐑𝐄𝐆𝐀𝐋𝐎𝐒, 𝐆𝐔𝐀𝐑𝐃𝐈𝐀𝐍𝐁𝐎𝐓-𝐌𝐃 🎊❯\n> ⓘ Ingresaste el codigo de bono en GuardianBot-MD para NaufraZapp-MD, no te pierdas de las novedades de este bot 🥳\n\n> 𝘽𝙊𝙉𝙊 𝘿𝙀𝙇 𝘾𝙊𝘿𝙄𝙂𝙊:\n> ${dia} diamantes 💎\n> ${tok} NZcoins 💰\n> ${hadesb} Monedas 🪙\n> ${expp} Experiencia ✨`
 
 const fkontak = {
         "key": {
@@ -30,12 +30,12 @@ const fkontak = {
         "participant": "0@s.whatsapp.net"
 }
 await conn.sendFile(m.chat, img, 'hades.jpg', texto, fkontak)
-//await conn.sendButton(m.chat, texto, wm, img, [['🔰 𝙼𝙴𝙽𝚄', '/menu'] ], fkontak, m)  
+//await conn.sendButton(m.chat, texto, wm, img, [['menu', '/menu'] ], fkontak, m)  
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
 handler.help = ['daily']
 handler.tags = ['xp']
-handler.command = ['antiguo', 'botantiguo', 'antiguo'] 
+handler.command = ['4J3JSONF48FN', 'DK3NS93N7DB9J', '592ND9ND8B3O9J', '3QS7B397DJ38NE8', 'I3NS9397YDBE8', '84BD82BW97HE83N', '3827UEND8BS8J30K', '27FBXWI37DJ37WO'] 
 handler.register = true
 export default handler
 

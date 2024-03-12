@@ -54,18 +54,20 @@ global.imagen6 = fs.readFileSync('./Menu3.png');
 
 // ❒═════════════════◊【 𝐄𝐍𝐋𝐀𝐂𝐄𝐒 】◊═════════════════❒
 //Enlaces aleatorios del bot
-global.gp1 = 'https://chat.whatsapp.com/CKqHvmFQDL1Kdj6TFHahUn' //Grupo Oficial De SakuraBot
-global.gp2 = 'https://chat.whatsapp.com/JNdlCEUKLqHAw87sOqfKmO' //CuriosityBot Y SakuraBot
-global.gp3 = 'https://chat.whatsapp.com/IstOAq2RnBx687WhQpOYK8' //NovaBot Y SakuraBot
-global.gp4 = 'https://chat.whatsapp.com/HXOGzELFOVXFM1KrSoKdqH' //Grupo MultiBots
-global.channel = 'https://whatsapp.com/channel/0029VaHdt8oJENxtNExL8z2n' //Canal Oficial
-global.yt = 'https://youtube.com/@user-bw5wl4ye8r' //Canal De Youtube
-global.md = 'https://github.com/diegojadibot/SakuraBotLite-MD' //Github Oficial
-global.fb = 'https://www.facebook.com/sakuritabot?mibextid=ZbWKwL' //Facebook Del Propietario
-
+global.gp1 = 'https://chat.whatsapp.com/DMNdCYvPGnOIO5Pg8MUQoV'
+global.gp2 = 'https://www.paypal.me/ColaboracionBotOFC'
+global.gp3 = 'https://www.instagram.com/naufrazapp?igsh=Y2g1ZXJxbm53eXAy'
+global.gp4 = 'https://www.tiktok.com/@naufra.zapp?_t=8kcJigwvtji&_r=1'
+global.channel = 'https://wa.me/5493873687620'
+global.paypal = 'https://www.paypal.me/NaufragoSolano'
+global.yt = 'https://youtube.com/@user-bw5wl4ye8r?si=qN8bP4ZdKm3yXwbx'
+global.md = 'https://github.com/Bots-WhatsApp-OFC/NaufraZapp-MD'
+global.fb = 'https://www.facebook.com/share/8XyV52kz3sfhrzft/?mibextid=qi2Omg'
 // ❒═════════════════◊【 𝐈𝐌𝐀𝐆𝐄𝐍𝐄𝐒 】◊═════════════════❒
 // ❒═════════════════◊【 𝐕𝐈𝐃𝐄𝐎𝐒 】◊═════════════════❒
 // ❒═════════════════◊【 𝐌𝐄𝐍𝐒𝐀𝐉𝐄𝐒 𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎𝐒 】◊═════════════════❒
+//MENSAJES RANDOM:
+global.naufraRedes = [gp1, gp2, gp3, gp4, channel, paypal, yt, md, fb]
 // ❒═════════════════◊【 𝐇𝐎𝐑𝐀𝐑𝐈𝐎𝐒 】◊═════════════════❒
 //Saludo User, Buen Dia
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'Linda Mañana'; break; case 1: hour = 'Linda Mañana'; break; case 2: hour = 'Linda Mañana'; break; case 3: hour = 'Linda Mañana'; break; case 4: hour = 'linda mañana'; break; case 5: hour = 'Linda Mañana'; break; case 6: hour = 'Linda Mañana'; break; case 7: hour = 'Linda Mañana'; break; case 8: hour = 'Linda Mañana'; break; case 9: hour = 'Linda Mañana'; break; case 10: hour = 'Lindo Dia'; break; case 11: hour = 'Lindo Dia'; break; case 12: hour = 'Lindo Dia'; break; case 13: hour = 'Lindo Dia'; break; case 14: hour = 'Linda Tarde'; break; case 15: hour = 'Linda Tarde'; break; case 16: hour = 'Linda Tarde'; break; case 17: hour = 'Linda Tarde'; break; case 18: hour = 'Linda Noche'; break; case 19: hour = 'Linda Noche'; break; case 20: hour = 'Linda Noche'; break; case 21: hour = 'Linda Noche'; break; case 22: hour = 'Linda Noche'; break; case 23: hour = 'Linda Noche'; break;}

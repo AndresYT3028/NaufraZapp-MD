@@ -7,7 +7,7 @@ if (m.chat.endsWith('broadcast') || m.fromMe || m.isGroup) return
 let user = global.db.data.users[m.sender]
 
 if (new Date() - user.pc < 21600000) return
-await m.reply(`> ⓘ Hola ${username}, bienvenido/a al bot oficial de \`NaufragoZapp-MD\`
+await m.reply(`> ⓘ Hola ${username}, bienvenido/a al bot oficial de \`NaufraZapp-MD\`
 
 > ⓘ SI TIENES DUDAS, PUEDES CONTACTAR AQUI:
 > wa.me/5493873687620

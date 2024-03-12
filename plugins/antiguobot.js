@@ -1,8 +1,8 @@
 let handler = async (m, { isPrems, conn }) => {
 let time = global.db.data.users[m.sender].lastcofre + 0 // 36000000 10 Horas //86400000 24 Horas
-if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`
+if (new Date - global.db.data.users[m.sender].lastcofre < 0) throw `> Usa un nuevo codigo en: *${msToTime(time - new Date())}* para volver a reglamar el bono.`
 
-let img = 'https://telegra.ph/file/fd6eea95ade105a2d8273.png'
+let img = 'https://i.postimg.cc/wTMjCBvr/be8e4992fd4912f06d6c574f96b816dc.jpg'
 let dia = Math.floor(Math.random() * 500)
 let tok = Math.floor(Math.random() * 400)
 let hadesb = Math.floor(Math.random() * 4000)

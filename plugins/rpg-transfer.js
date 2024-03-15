@@ -5,7 +5,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
   if (confirmation[m.sender]) return conn.sendMessage(m.chat, {text: '> ⓘ Aun no hay fondos de transferencia, realice este comando mas tarde...', mentions: [m.sender]}, {quoted: m});
   const user = global.db.data.users[m.sender];
   const item = items.filter((v) => v in user && typeof user[v] == 'number');
-  const lol = `> ⓘ Uso xorrecto del comando: 
+  const lol = `> ⓘ Uso correcto del comando para transferir: 
 
 > \`EJEMPLO 1:\`
 > *${usedPrefix + command}*  [tipo] [cantidad] [@user]

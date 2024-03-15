@@ -30,7 +30,7 @@ RESPONDE A ESTE MENSAJE CON LAS RESPUESTAS!`.trim();
 };
 handler.help = ['tebaklagu'];
 handler.tags = ['game'];
-handler.command = /^cancion|canción$/i;
+handler.command = /^cancionesss|canciónnnnn$/i;
 export default handler;
 async function fetchJson(url, options) {
   try {

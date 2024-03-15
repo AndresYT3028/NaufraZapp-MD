@@ -14,7 +14,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
   const i = ps.getRandom();
   const j = ps.getRandom();
 
-  if (command == 'topgays') {
+  if (command == 'topgaysssss') {
     const vn = './media/gay2.mp3';
     const top = `> *TOP 10 PERSONAS GAYS/LESBIANAS ENCONTRADOS EN EL GRUPO!! 🏳️‍🌈🏳️‍⚧️*
     
@@ -33,7 +33,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
     // conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, { type: 'audioMessage', ptt: true })
   }
 
-  if (command == 'topotakus') {
+  if (command == 'topotakusssss') {
     const vn = './media/otaku.mp3';
     const top = `> *TOP 10 OTAKUS ENCONTRADOS EN EL GRUPO!! 💮*
     
@@ -52,7 +52,7 @@ function handler(m, {groupMetadata, command, conn, participants}) {
     // conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })
   }
 }
-handler.help = handler.command = ['topgays', 'topotakus'];
+handler.help = handler.command = ['topgaysssss', 'topotakusssss'];
 handler.tags = ['games'];
 handler.group = true;
 export default handler;

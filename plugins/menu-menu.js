@@ -59,7 +59,7 @@ ${readMore}
 > _#estado_
 > _#installbot_
 > _#infobot_
-> _#grupo_
+> _#gruponz_
 > _#velocidad_
 ╰•─────────────────•╯
 

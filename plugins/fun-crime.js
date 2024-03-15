@@ -26,7 +26,7 @@ if (media === 'text5') return conn.reply(m.chat, `> ⓘ Robaste a: @${randow.spl
 console.log(e)}}
 handler.help = ['robar'];
 handler.tags = ['xp'];
-handler.command = /^(abancar|Abancar|Crime|crime)$/i
+handler.command = /^(ruletasssss|Robaremossss|crimenessssss)$/i
 handler.register = true
 handler.group = true
 export default handler;

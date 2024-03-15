@@ -62,7 +62,7 @@ ${end}`);
 };
 handler.help = ['slot <apuesta>'];
 handler.tags = ['game'];
-handler.command = ['slot'];
+handler.command = ['slotttt'];
 export default handler;
 
 function msToTime(duration) {

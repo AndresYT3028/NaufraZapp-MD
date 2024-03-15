@@ -1,4 +1,4 @@
-const handler = async (m, {conn, isPrems}) => { // lastmiming
+/*const handler = async (m, {conn, isPrems}) => { // lastmiming
   const user = global.db.data.users[m.sender];
   const premium = user.premium;
   const minar = `${pickRandom(['Que Pro 😎 has minado',
@@ -58,3 +58,4 @@ function msToTime(duration) {
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
+*/

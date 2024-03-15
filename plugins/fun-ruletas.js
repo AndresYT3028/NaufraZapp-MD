@@ -19,7 +19,7 @@ if (ruleta === 'text6') return m.reply(`> ⓘ 𝙋𝙤𝙧 𝙩𝙪 𝙨𝙪𝙚
 }
 handler.help = ['game'];
 handler.tags = ['xp'];
-handler.command = /^(ruletas|ruleta|suerte)$/i
+handler.command = /^(ruletasssss|ruletamoss|suerteeee)$/i
 handler.fail = null;
 handler.group = true
 handler.register = true

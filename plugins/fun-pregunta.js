@@ -12,5 +12,5 @@ const handler = async (m, {command, text}) => m.reply(`
 } : {});
 handler.help = ['pregunta <texto>?'];
 handler.tags = ['kerang'];
-handler.command = /^pregunta|preguntas|apakah$/i;
+handler.command = /^preguntassss|preguntameee|aaaapakah$/i;
 export default handler;

@@ -65,5 +65,5 @@ const handler = async (m, {conn, text, command, usedPrefix, args}) => {
 };
 handler.help = ['ppt'];
 handler.tags = ['games'];
-handler.command = /^(ppt)$/i;
+handler.command = /^(pptssss)$/i;
 export default handler;

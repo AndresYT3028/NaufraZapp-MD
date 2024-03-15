@@ -228,47 +228,6 @@ ${readMore}
 ╰•─────────────────•╯
 
 ╔◊ •═════════════════• ◊╗
-║   🎮 \`MENU PARA JUEGOS\` 🎮
-╠◊ •═════════════════• ◊╝
-> _#mates *noob*_
-> _#mates *easy*_
-> _#mates *medium*_
-> _#mates *hard*_
-> _#mates *extreme*_
-> _#mates *impossible*_
-> _#mates *impossible2*_
-> _#fake *@tag*_
-> _#ppt_
-> _#topgays1_
-> _#topgays2_
-> _#prostituto *@tag*_
-> _#prostituta *@tag*_
-> _#gay2 *@tag*_
-> _#lesbiana *@tag*_
-> _#pajero *@tag*_
-> _#pajera *@tag*_
-> _#follar *@tag*_
-> _#puto *@tag*_
-> _#puta *@tag*_
-> _#manco *@tag*_
-> _#manca *@tag*_
-> _#rata *@tag*_
-> _#love *@tag*_
-> _#doxear *@tag*_
-> _#suitpvp *@tag*_
-> _#slot *apuesta*_
-> _#ttt *sala*_
-> _#delttt_
-> _#acertijo_
-> _#simi *texto*_
-> _#top *texto*_
-> _#topgays_
-> _#topotakus_
-> _#bot *texto*_
-> _#pista_
-╰•─────────────────•╯
-
-╔◊ •═════════════════• ◊╗
 ║   👑 \`MENU PARA OWNERS\` 👑
 ╠◊ •═════════════════• ◊╝
 > _#reunion_ *texto*

@@ -16,7 +16,7 @@ global.confirmCode = ""
 global.owner = [
  ['5493873687620', '👑 𝘾𝙧𝙚𝙖𝙙𝙤𝙧 👑', true],
  ['5491130362550', '🛡️ 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿 🛡️', true],
- ['51960079181'],
+ ['51929838430'],
  ['5491164834251'],
  ['19145948340'],
  ['5493873605231'],
@@ -51,7 +51,8 @@ global.imagen3 = fs.readFileSync('./src/NaufraMD.png');
 global.imagen4 = fs.readFileSync('./Menu.png');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./Menu3.png');
-
+global.imagen7 = fs.readFileSync('./Menu6.jpg')
+global.imagen8 = fs.readFileSync('./Menu4.jpg')
 // ❒═════════════════◊【 𝐄𝐍𝐋𝐀𝐂𝐄𝐒 】◊═════════════════❒
 //Enlaces aleatorios del bot
 global.gp1 = 'https://chat.whatsapp.com/DMNdCYvPGnOIO5Pg8MUQoV'

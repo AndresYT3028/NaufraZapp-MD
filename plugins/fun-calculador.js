@@ -4,7 +4,7 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
   let emoji = '';
   let description = '';
   switch (command) {
-    case 'gay2':
+    case 'gaysssssss':
       emoji = '🏳️‍🌈';
       if (percentages < 50) {
         description = `*Los calculos han arrojado que ${text.toUpperCase()} es ${percentages}% Gay. ${emoji}*\n> *ⓘ Eso es bajo... pero igual eres gay.*`;
@@ -14,7 +14,7 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `*Los calculos han arrojado que ${text.toUpperCase()} es ${percentages}% Gay. ${emoji}*\n> *ⓘ Retrocedamos, cuidado y nos afecta..*`;
       }
       break;
-    case 'lesbiana':
+    case 'lesbianassssss':
       emoji = '🏳️‍🌈';
       if (percentages < 50) {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Quizás necesites más películas románticas en tu vida.*`;
@@ -24,8 +24,8 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Mantén el amor floreciendo!*`;
       }
       break;
-    case 'pajero':
-    case 'pajera':
+    case 'pajerosssssss':
+    case 'pajerasssssss':
       emoji = '💦';
       if (percentages < 50) {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Tal vez necesites más hobbies!*`;
@@ -35,8 +35,8 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Mantén el buen trabajo (en solitario).*`;
       }
       break;
-    case 'puto':
-    case 'puta':
+    case 'putosssssss':
+    case 'putasssssss':
       emoji = '🔥';
       if (percentages < 50) {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ ¡Más suerte en tu próxima conquista!*`;
@@ -46,8 +46,8 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Mantén ese encanto ardiente!*`;
       }
       break;
-    case 'manco':
-    case 'manca':
+    case 'mancossssss':
+    case 'mancassssss':
       emoji = '💩';
       if (percentages < 50) {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ ¡No eres el único en ese club!*`;
@@ -57,7 +57,7 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Mantén esa actitud valiente!*`;
       }
       break;
-    case 'rata':
+    case 'ratassssss':
       emoji = '🐁';
       if (percentages < 50) {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Nada de malo en disfrutar del queso!*`;
@@ -67,8 +67,8 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ Come queso con responsabilidad! *`;
       }
       break;
-    case 'prostituto':
-    case 'prostituta':
+    case 'prostitutosssssss':
+    case 'prostitutasssssss':
       emoji = '😳';
       if (percentages < 50) {
         description = `*Los cálculos han arrojado que ${text.toUpperCase()} es ${percentages}% ${command}. ${emoji}*\n> *ⓘ El mercado está en auge!*`;
@@ -110,7 +110,7 @@ var hawemod = [
  }
 loading()    
 };
-handler.help = ['gay2', 'lesbiana', 'pajero', 'pajera', 'puto', 'puta', 'manco', 'manca', 'rata', 'prostituta', 'prostituto'].map((v) => v + ' @tag | nombre');
+handler.help = ['gaysssssss', 'lesbianassssss', 'pajerossssss', 'pajerassssss', 'putosssss', 'putasssss', 'mancosssss', 'mancasssss', 'ratassssss', 'prostitutasssssss', 'prostitutosssssss'].map((v) => v + ' @tag | nombre');
 handler.tags = ['calculator'];
-handler.command = /^(gay2|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto)$/i;
+handler.command = /^(gaysssssss|lesbianassssss|pajerossssss|pajerassssss|putosssssss|putassssss|mancossssss|mancassssss|ratasssssss|prostitutasssssss|prostitutosssssss)$/i;
 export default handler;

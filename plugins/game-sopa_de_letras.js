@@ -163,5 +163,5 @@ return
 }}
 }}
 
-handler.command = /^(buscarpalabra|sopa|soup|wordsearch|wordfind|spdeletras|spletras|sppalabras|spalabras|spdepalabras)$/i
+handler.command = /^(buscarpalabrasss|sopassss|soupppa)$/i
 export default handler

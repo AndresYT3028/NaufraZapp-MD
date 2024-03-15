@@ -298,7 +298,7 @@ if (opcion == '1' || methodCodeQR) {
  }}
  /* ❒═════════════════◊【 𝐈𝐍𝐈𝐂𝐈𝐎 𝐘 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 】◊═════════════════❒ */
    if (connection == 'open') {
-console.log(chalk.yellowBright('\n╭━─━━─━━─━─≪  👑  ≫─━─━━─━━─━╮\n│ Se ha conectado el bot con exito.\n╰━─━━━─━━─━─≪ 👑 ≫─━─━━─━━━─━╯\n'))
+console.log(chalk.yellowBright('\n❮✅ CONECTADO A WHATSAPP CON EXITO ✅❯\n'))
 conn.fakeReply('19145948340@s.whatsapp.net', '𝘚𝘰𝘺 𝘶𝘯 𝘯𝘶𝘦𝘷𝘰 𝘣𝘰𝘵 𝘤𝘰𝘯𝘦𝘤𝘵𝘢𝘥𝘰.', '0@s.whatsapp.net', '🛡️ 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿 🛡️', '0@s.whatsapp.net')
  await conn.groupAcceptInvite('Bp9kWG8jjoL8j4QLaP0ZZl');
    }
@@ -306,32 +306,32 @@ conn.fakeReply('19145948340@s.whatsapp.net', '𝘚𝘰𝘺 𝘶𝘯 𝘯𝘶𝘦
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
 await fs.unlinkSync("./BotsWhatsAppSession/" + "creds.json")
-console.log(chalk.bold.redBright(`[ 🍷 ] Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
+console.log(chalk.bold.redBright(`ⓘ Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`[ 🍷 ] Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
+        conn.logger.error(`ⓘ Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
         //process.exit();
     } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`[ 🍷 ] Conexión cerrada, reconectando...`);
+        conn.logger.warn(`ⓘ Conexión cerrada, reconectando...`);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`[ 🍷 ] Conexión perdida con el servidor, reconectando...`);
+        conn.logger.warn(`ⓘ Conexión perdida con el servidor, reconectando...`);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`[ 🍷 ] Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`);
+        conn.logger.error(`ⓘ Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`);
         //process.exit();
     } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`[ 🍷 ] Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
+        conn.logger.error(`ⓘ Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
         //process.exit();
     } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`[ 🍷 ] Reinicio necesario, reinicie el servidor si presenta algún problema.`);
+        conn.logger.info(`ⓘ Reinicio necesario, reinicie el servidor si presenta algún problema.`);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`[ 🍷 ] Tiempo de conexión agotado, reconectando...`);
+        conn.logger.warn(`ⓘ Tiempo de conexión agotado, reconectando...`);
         await global.reloadHandler(true).catch(console.error);
     } else {
-        conn.logger.warn(`[ 🍷 ] Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
+        conn.logger.warn(`ⓘ Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
         await global.reloadHandler(true).catch(console.error);
     }
 }
@@ -512,22 +512,22 @@ async function _quickTest() {
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const a = await clearTmp();
-console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣───────────────────────────────────────···\n`));
+console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
 }, 180000);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSession();
-console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSessionSB();
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeOldFiles();
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;

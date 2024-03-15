@@ -3,7 +3,7 @@ const handler = async (m, {conn}) => {
 };
 handler.help = ['reto'];
 handler.tags = ['fun'];
-handler.command = /^reto/i;
+handler.command = /^retossss/i;
 export default handler;
 
 function pickRandom(list) {

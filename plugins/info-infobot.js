@@ -48,7 +48,7 @@ PRÓXIMAMENTE...`.trim();
         title: "Bot de WhatsApp",
         body: wm,
         thumbnail: imagen6,
-        sourceUrl: "https://atom.bio/sakuralite",
+        sourceUrl: "https://wa.me/5493873687620",
       },
     },
     caption: info,

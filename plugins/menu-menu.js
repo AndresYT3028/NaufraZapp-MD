@@ -57,7 +57,6 @@ ${readMore}
 > _#owner_
 > _#donar_
 > _#estado_
-> _#ofcguardian_
 > _#installbot_
 > _#infobot_
 > _#grupo_

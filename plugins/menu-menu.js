@@ -88,7 +88,7 @@ ${readMore}
 > _#on *public*_
 > _#on *pconly*_
 > _#on *gconly*_
-╰•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•
+> •┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•
 > _#off *antiprivado*_ 
 > _#off *restrict*_
 > _#off *autoread*_

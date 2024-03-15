@@ -32,7 +32,7 @@ Instagram:
 ${gp3}
 > •──────────•`
 await conn.sendFile(m.chat, media, 'gata.jpg', str, fkontak)}
-handler.command = /^cuentas|cuentasoficiales$/i
+handler.command = /^cuentasnz|cuentasoficiales$/i
 handler.exp = 35
 handler.register = true
 export default handler

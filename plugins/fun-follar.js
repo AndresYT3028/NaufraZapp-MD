@@ -1,4 +1,4 @@
-
+/*
 let handler = async (m, { conn, command, text }) => {
 if (!text) throw `> ⓘ 𝙄𝙣𝙜𝙧𝙚𝙨𝙚 𝙚𝙡 𝙣𝙤𝙢𝙗𝙧𝙚 𝙙𝙚 𝙡𝙖 𝙥𝙚𝙧𝙨𝙤𝙣𝙖 𝙤 𝙚𝙩𝙞𝙦𝙪𝙚𝙩𝙖 𝙖 𝙡𝙖 𝙥𝙚𝙧𝙨𝙤𝙣𝙖 𝙥𝙖𝙧𝙖 𝙪𝙨𝙖𝙧 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤...`
 let user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
@@ -14,3 +14,4 @@ handler.command = /^(Follar|violar)/i
 handler.fail = null
 handler.register = true
 export default handler
+*/

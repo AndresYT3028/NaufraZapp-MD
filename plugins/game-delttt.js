@@ -5,6 +5,6 @@ const handler = async (m, {conn, usedPrefix, command}) => {
   delete conn.game[room.id];
   await m.reply('> ✅ Se ha eliminado correctamente la sala del juego que has creado.');
 };
-handler.command = /^(delttt|deltt|delxo|deltictactoe)$/i;
+handler.command = /^(deltttttt|delttss)$/i;
 handler.fail = null;
 export default handler;

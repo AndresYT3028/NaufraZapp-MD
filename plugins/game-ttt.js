@@ -52,6 +52,6 @@ const handler = async (m, {conn, usedPrefix, command, text}) => {
     conn.game[room.id] = room;
   }
 };
-handler.command = /^(tictactoe|ttc|ttt|xo)$/i;
+handler.command = /^(tictactoeeeee)$/i;
 handler.register = true
 export default handler;

@@ -299,8 +299,8 @@ if (opcion == '1' || methodCodeQR) {
  /* ❒═════════════════◊【 𝐈𝐍𝐈𝐂𝐈𝐎 𝐘 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 】◊═════════════════❒ */
    if (connection == 'open') {
 console.log(chalk.yellowBright('\n❮✅ CONECTADO A WHATSAPP CON EXITO ✅❯\n'))
-conn.fakeReply('19145948340@s.whatsapp.net', '𝘚𝘰𝘺 𝘶𝘯 𝘯𝘶𝘦𝘷𝘰 𝘣𝘰𝘵 𝘤𝘰𝘯𝘦𝘤𝘵𝘢𝘥𝘰.', '0@s.whatsapp.net', '🛡️ 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿 🛡️', '0@s.whatsapp.net')
- await conn.groupAcceptInvite('Bp9kWG8jjoL8j4QLaP0ZZl');
+conn.fakeReply('19145948340@s.whatsapp.net', '😃 𝙃𝙤𝙡𝙖 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿, 𝙨𝙤𝙮 𝙪𝙣 𝙣𝙪𝙚𝙫𝙤 𝙗𝙤𝙩 𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤.', '0@s.whatsapp.net', '🛡️ 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿 🛡️', '0@s.whatsapp.net')
+ await conn.groupAcceptInvite('FqVzq74EwoL3tAA2DSGcXL');
    }
    /* ❒═════════════════◊【 𝐄𝐑𝐑𝐎𝐑𝐄𝐒 𝐄𝐍 𝐋𝐀 𝐂𝐎𝐍𝐒𝐎𝐋𝐀 】◊═════════════════❒ */
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;

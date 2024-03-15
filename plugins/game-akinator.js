@@ -40,5 +40,5 @@ const handler = async (m, {conn, usedPrefix, command, text}) => {
 };
 handler.menu = ['akinator'];
 handler.tags = ['game'];
-handler.command = /^(akinator)$/i;
+handler.command = /^(akinatorssss)$/i;
 export default handler;

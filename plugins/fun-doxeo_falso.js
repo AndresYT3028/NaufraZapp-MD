@@ -1,3 +1,4 @@
+
 import {performance} from 'perf_hooks';
 const handler = async (m, {conn, text}) => {
     
@@ -105,7 +106,7 @@ loading()
 };
 handler.help = ['doxear <nombre> | <@tag>'];
 handler.tags = ['fun'];
-handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i;
+handler.command = /^Hackeameeee|Hackesssssss/i;
 export default handler;
 
 function getRandomValue(arr) {

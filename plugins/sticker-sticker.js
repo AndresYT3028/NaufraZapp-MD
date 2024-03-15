@@ -10,10 +10,10 @@ try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply(`> ⓘ 𝙀𝙡 𝙫𝙞𝙙𝙚𝙤 𝙞𝙣𝙜𝙧𝙚𝙨𝙖𝙙𝙤 𝙖 𝙨𝙚𝙧 𝙨𝙩𝙞𝙘𝙠𝙚𝙧, 𝙣𝙤 𝙥𝙪𝙚𝙙𝙚 𝙙𝙪𝙧𝙖𝙧 𝙢𝙖𝙨 𝙙𝙚 \`7\` 𝙨𝙚𝙜𝙪𝙣𝙙𝙤𝙨...`)
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply(`> ⓘ 𝙀𝙡 𝙫𝙞𝙙𝙚𝙤 𝙣𝙤 𝙙𝙚𝙗𝙚 𝙙𝙚 𝙙𝙪𝙧𝙖𝙧 𝙢𝙖𝙨 𝙙𝙚 8 𝙨𝙚𝙜𝙪𝙣𝙙𝙤𝙨, 𝙥𝙤𝙧 𝙛𝙖𝙫𝙤𝙧, 𝙧𝙚𝙘𝙤𝙧𝙩𝙚 𝙚𝙡 𝙫𝙞𝙙𝙚𝙤..`)
 let img = await q.download?.()
 
-if (!img) throw `> ⓘ 𝙎𝙚 𝙥𝙧𝙤𝙙𝙪𝙟𝙤 𝙪𝙣 𝙚𝙧𝙧𝙤𝙧, 𝙧𝙚𝙘𝙪𝙚𝙧𝙙𝙚 𝙧𝙚𝙨𝙥𝙤𝙣𝙙𝙚𝙧 𝙪𝙣𝙖 𝙞𝙢𝙖𝙜𝙚𝙣, 𝙫𝙞𝙙𝙚𝙤 𝙤 𝙜𝙞𝙛 𝙥𝙖𝙧𝙖 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤...`
+if (!img) throw `> ⓘ 𝙍𝙚𝙨𝙥𝙤𝙣𝙙𝙖 𝙖 𝙪𝙣𝙖 𝙞𝙢𝙖𝙜𝙚𝙣, 𝙫𝙞𝙙𝙚𝙤 𝙤 𝙜𝙞𝙛 𝙥𝙖𝙧𝙖 𝙘𝙧𝙚𝙖𝙧 𝙚𝙡 𝙨𝙩𝙞𝙘𝙠𝙚𝙧.`
 
 let out
 try {
@@ -31,16 +31,16 @@ stiker = await sticker(false, out, global.packname, global.author)
 } else if (args[0]) {
 if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
 
-else return m.reply(`URL invalido`)
+else return m.reply(`> ⓘ 𝙀𝙡 𝙚𝙣𝙡𝙖𝙘𝙚 𝙞𝙣𝙜𝙧𝙚𝙨𝙖𝙙𝙤 𝙣𝙤 𝙚𝙨 𝙫𝙖𝙡𝙞𝙙𝙤.`)
 
 }
 } catch (e) {
 console.error(e)
 if (!stiker) stiker = e
 } finally {
-if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: ``, mediaType: 2, sourceUrl: [gp1, channel, yt, md, fb, ig, paypal].getRandom(), thumbnail: imagen6}}}, { quoted: m })
+if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: ``, mediaType: 2, sourceUrl: [gp1, channel, md, fb].getRandom(), thumbnail: imagen3}}}, { quoted: m })
 
-else throw `> ⓘ 𝙎𝙚 𝙥𝙧𝙤𝙙𝙪𝙟𝙤 𝙪𝙣 𝙚𝙧𝙧𝙤𝙧, 𝙧𝙚𝙘𝙪𝙚𝙧𝙙𝙚 𝙧𝙚𝙨𝙥𝙤𝙣𝙙𝙚𝙧 𝙪𝙣𝙖 𝙞𝙢𝙖𝙜𝙚𝙣, 𝙫𝙞𝙙𝙚𝙤 𝙤 𝙜𝙞𝙛 𝙥𝙖𝙧𝙖 𝙚𝙨𝙩𝙚 𝙘𝙤𝙢𝙖𝙣𝙙𝙤...`
+else throw `> ⓘ 𝙍𝙚𝙨𝙥𝙤𝙣𝙙𝙖 𝙖 𝙪𝙣𝙖 𝙞𝙢𝙖𝙜𝙚𝙣, 𝙫𝙞𝙙𝙚𝙤 𝙤 𝙜𝙞𝙛 𝙥𝙖𝙧𝙖 𝙘𝙧𝙚𝙖𝙧 𝙚𝙡 𝙨𝙩𝙞𝙘𝙠𝙚𝙧.`
 
 }}
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']

@@ -3,10 +3,10 @@ const handler = async (m, {isPrems, conn}) => {
   if (new Date - global.db.data.users[m.sender].lastcofre < 86400000) throw `> ⓘ *Ya reclamaste tu cofre, por favor vuelva en: ${msToTime(time - new Date())} para volver a reclamar el cofre.*`;
 
   const img = 'https://i.postimg.cc/wTMjCBvr/be8e4992fd4912f06d6c574f96b816dc.jpg';
-  const dia = Math.floor(Math.random() * 30);
-  const tok = Math.floor(Math.random() * 10);
-  const mystic = Math.floor(Math.random() * 4000);
-  const expp = Math.floor(Math.random() * 5000);
+  const dia = Math.floor(Math.random() * 300);
+  const tok = Math.floor(Math.random() * 100);
+  const mystic = Math.floor(Math.random() * 8000);
+  const expp = Math.floor(Math.random() * 50000);
 
   global.db.data.users[m.sender].limit += dia;
   global.db.data.users[m.sender].money += mystic;

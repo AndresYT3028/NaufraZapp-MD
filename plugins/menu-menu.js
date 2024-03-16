@@ -54,13 +54,12 @@ ${readMore}
 ╠◊ •═════════════════• ◊╝
 > _#contactos_
 > _#cuentasnz_
-> _#owner_
+> _#creador_
 > _#donar_
+> _#mirecurso_
 > _#estado_
-> _#installbot_
 > _#infobot_
 > _#gruponz_
-> _#velocidad_
 ╰•─────────────────•╯
 
 ╔◊ •═════════════════• ◊╗
@@ -75,7 +74,6 @@ ${readMore}
 > _#on *welcome*_
 > _#on *antilink2*_
 > _#on *antilink*_
-> _#on *juegos*_
 > _#on *detect*_
 > _#on *audios*_
 > _#on *autosticker*_
@@ -98,7 +96,6 @@ ${readMore}
 > _#off *welcome*_
 > _#off *antilink2*_
 > _#off *antilink*_
-> _#off *juegos*_
 > _#off *detect*_
 > _#off *audios*_
 > _#off *autosticker*_
@@ -153,19 +150,12 @@ ${readMore}
 ╔◊ •═════════════════• ◊╗
 ║       👥 \`CONFIG GROUP\` 👥
 ╠◊ •═════════════════• ◊╝
-> _#salir *admins*_
 > _#add *numero*_
 > _#kick *responder*_
 > _#kick2 *responder*_
-> _#mute *@tag*_
-> _#unmute *@tag*_
-> _#listanum *texto*_
-> _#kicknum *texto*_
 > _#grupo *abrir*_
 > _#grupo *cerrar*_
-> _#grouptime_
 > _#promote *@tag*_
-> _#demote *@tag*_
 > _#demote *@tag*_
 > _#link_
 > _#setname *texto*_
@@ -177,10 +167,6 @@ ${readMore}
 > _#hidetag *audio*_
 > _#hidetag *video*_
 > _#hidetag *imagen*_
-> _#warn *@tag*_
-> _#unwarn *@tag*_
-> _#listwarn_
-> _#setpp *imagen*_
 ╰•─────────────────•╯
 
 ╔◊ •═════════════════• ◊╗
@@ -192,58 +178,36 @@ ${readMore}
 > _#logos_
 > _#logochristmas *texto*_
 > _#logocorazon *texto*_
-> _#ytcomment *texto*_
-> _#hornycard *@tag*_
-> _#simpcard *@tag*_
 > _#dsowner_
 > _#gptvoz *texto*_
 > _#dall-e *texto*_
-> _#spamwa_
 > _#join *url grupal*_
 > _#consejo_
-> _#pixelar_
-> _#blur_
 > _#piropo_
-> _#tamaño_
+> _#yoayudo *texto*_
 > _#reporte *texto*_
-> _#readviewonce_
-> _#clima *pais*_
-> _#encuesta *texto*_
-> _#afk_
-> _#start_
-> _#next_
-> _#leave_
+> _#s *img*_
+> _#sticker *img*_
 > _#ocr *img*_
 > _#hd *img*_
 > _#acortar *url*_
 > _#calc_
 > _#del_
 > _#whatmusic *audio*_
-> _#readqr *qr img*_
-> _#qrcode *texto*_
-> _#readmore *texto*_
 > _#styletext *texto*_
 > _#traducir *texto*_
-> _#nowa *numero*_
 ╰•─────────────────•╯
 
 ╔◊ •═════════════════• ◊╗
 ║   👑 \`MENU PARA OWNERS\` 👑
 ╠◊ •═════════════════• ◊╝
-> _#reunion_ *texto*
 > _#setprefix *prefix*_
 > _#resetprefix_
 > _#autoadmin_
-> _#grouplist_
-> _#chetar_
-> _#leavegc_
-> _#cajafuerte_
-> _#blocklist_
 > _#addowner *@tag*_
 > _#delowner *@tag*_
 > _#block *@tag*_
 > _#unblock *@tag*_
-> _#msg *texto*_
 > _#banchat_
 > _#unbanchat_
 > _#resetuser *@tag*_
@@ -252,25 +216,9 @@ ${readMore}
 > _#dardiamantes *@tag*_
 > _#añadirxp *@tag*_
 > _#banuser *@tag*_
-> _#bc *texto*_
-> _#bcchats *texto*_
-> _#bcgc *texto*_
-> _#bcgc2 *audio*_
-> _#bcgc2 *video*_
-> _#bcgc2 *img*_
-> _#bcbot *texto*_
 > _#cleartpm_
 > _#restart_
 > _#update_
-> _#banlist_
-> _#addprem *@tag*_
-> _#delprem *@tag*_
-> _#listcmd_
-> _#setppbot *img*_
-> _#addcmd_
-> _#delcmd_
-> _#saveimage_
-> _#pviewimage_
 ╰•─────────────────•╯
 
 ╔◊ •═════════════════• ◊╗
@@ -278,32 +226,18 @@ ${readMore}
 ╠◊ •═════════════════• ◊╝
 > _#cofre_
 > _#balance_
-> _#claim_
 > _#heal_
-> _#lb_
 > _#levelup_
 > _#myns_
 > _#perfil_
 > _#work_
 > _#minar_
-> _#minar2_
 > _#buy_
 > _#buyall_
 > _#verificar_
 > _#robar *@tag*_
 > _#transfer *@tag*_
 > _#unreg_
-╰•─────────────────•╯
-
-╔◊ •═════════════════• ◊╗
-║      🎨 \`STICKERS Y MAS\` 🎨
-╠◊ •═════════════════• ◊╝
-> _#sticker *img*_
-> _#s *img*_
-> _#emojimix_
-> _#toanime *img*_
-> _#togifaud *video*_
-> _#toimg *sticker*_
 ╰•─────────────────•╯
 
 > 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿`.trim();     if (m.isGroup) { 

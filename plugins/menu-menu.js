@@ -26,7 +26,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 
 const document = doc[Math.floor(Math.random() * doc.length)];
  const str = `╔◊ •═════════════════• ◊╗
-║♨️ \`𝑵𝒂𝒖𝒇𝒓𝒂𝒁𝒂𝒑𝒑-𝑴𝑫\` ♨️
+║🌎 \`𝑵𝒂𝒖𝒇𝒓𝒂𝒁𝒂𝒑𝒑-𝑴𝑫\` 🌎
 ║•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•
 ║𝘏𝘰𝘭𝘢 ${taguser}
 ║ ${date}
@@ -56,6 +56,7 @@ ${readMore}
 > _#cuentasnz_
 > _#creador_
 > _#donar_
+> _#tipobot_
 > _#mirecurso_
 > _#estado_
 > _#infobot_

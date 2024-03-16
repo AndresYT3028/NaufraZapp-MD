@@ -46,7 +46,7 @@ async function handler(m, {usedPrefix, command}) {
     }
   }
 }
-handler.help = ['start', 'leave', 'next'];
+handler.help = ['startttt', 'leaveeeee', 'nexttttt'];
 handler.tags = ['anonymous'];
 handler.command = ['start', 'leave', 'next'];
 handler.private = true;

@@ -28,9 +28,10 @@ const document = doc[Math.floor(Math.random() * doc.length)];
  const str = `> 👑 Gracias por apoyar este bot
 > ✨ Gracias a tu colaboración 🪙 el bot seguira en constantes actualizaciónes mejoradas 🎨, puede comprar servidores tambien, 🟢 funcionalidad, 👥 grupos con bot, ✅ rapido y seguro, 🤖 bot en 24/7, 🌍 precios aceptables, 🍷 mas funciones solo lo podras encontrar en: 🌌 \`NaufraZapp-MD\` 🌌
 
-> https://www.paypal.me/ColaboracionBotOFC
+> https://www.paypal.me/NaufragoSolano
+
 > \`Mandar pruebas en captura:\`
-> https://wa.me/19145948340
+> https://wa.me/51929838430
  `.trim();     if (m.isGroup) { 
  // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};

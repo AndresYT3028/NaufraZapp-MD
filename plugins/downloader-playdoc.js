@@ -10,7 +10,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     let additionalText = '';
     if (command === 'play3' || command == 'playdoc') {
       additionalText = 'audio';
-    } else if (command === 'play4' || command == 'playdoc2') {
+    } else if (command === 'youtube1' || command == 'playdoc2') {
       additionalText = 'video';
     }
     await conn.sendMessage(m.chat, { react: { text: '👑', key: m.key } })
@@ -56,7 +56,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
         }
       }
     }
-    if (command == 'play4' || command == 'playdoc2') {
+    if (command == 'youtube1' || command == 'ytdoc1') {
       try {
         const qu = '360';
         const q = qu + 'p';
@@ -91,7 +91,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 };
 handler.help = ['play3', 'play4'].map((v) => v + ' < busqueda >');
 handler.tags = ['downloader'];
-handler.command = /^(playdoc|playdoc2|play3|play4)$/i;
+handler.command = /^(playdoc|ytdoc1|play3|youtube1)$/i;
 handler.register = true
 export default handler;
 

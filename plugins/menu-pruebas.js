@@ -28,7 +28,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
  const str = `👋🏻 Hola ${taguser} 😁
 > •┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•
 > ⓘ 𝙏𝙄𝙋𝙊 𝘿𝙀 𝘽𝙊𝙏:
-${(conn.user.jid == global.conn.user.jid ? '' : `@${global.conn.user.jid.split`@`[0]}`) || '> BOT OFICIAL / NAUFRAZAPP'}
+${(conn.user.jid == global.conn.user.jid ? '' : `> SUB BOT / NAUFRAZAPP`) || '> BOT OFICIAL / NAUFRAZAPP'}
 > •┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•
 > ⓘ 𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏𝙄𝙑𝙊:
 > ${uptime}
@@ -45,7 +45,7 @@ ${(conn.user.jid == global.conn.user.jid ? '' : `@${global.conn.user.jid.split`@
 > ⓘ 𝙑𝙀𝙍𝙎𝙄𝙊𝙉:
 > ${vs}
 > •┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅•
-> ⓘ 𝙏𝘼𝙂 𝘽𝙊𝙏:
+> ⓘ 𝙏𝘼𝙂 𝘽𝙊𝙏 𝙊𝙁𝘾:
 @${global.conn.user.jid.split`@`[0]}
 
 

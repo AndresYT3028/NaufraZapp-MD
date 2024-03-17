@@ -17,11 +17,11 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     let additionalText = '';
     if (command === 'play') {
       additionalText = 'audio';
-    } else if (command === 'play2') {
+    } else if (command === 'youtube') {
       additionalText = 'video';
     }
     await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
-    const texto1 = `♡₊˚ ₊✧♡₊˚ 🦢・₊✧★🎸🎧°⋆♡₊˚ 🦢
+    const texto1 = `♡₊˚ ₊✧♡₊˚ 📎・₊✧★🎸🎧°⋆♡₊˚ 🛰️
 > ⓘ 𝙏𝙄𝙏𝙐𝙇𝙊/𝙉𝙊𝙈𝘽𝙍𝙀:
 > • ${yt_play[0].title}
 > •┄┄┄┄┄┄┄┄┄┄┄┄•
@@ -30,7 +30,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 > •┄┄┄┄┄┄┄┄┄┄┄┄•
 > ⓘ 𝙇𝙄𝙉𝙆/𝙀𝙉𝙇𝘼𝘾𝙀:
 > • ${yt_play[0].url}
-♡₊˚ 🦢₊✧♡₊˚ 🦢・₊✧★🎸🎧°⋆♡₊˚ 🦢
+♡₊˚ 🛰️₊✧♡₊˚ 📎・₊✧★🎸🎧°⋆♡₊˚ 📎
 01:06 ======⬤------------------------- ${secondString(yt_play[0].duration.seconds)}
                ⇆ㅤ ◁ㅤ❚❚ㅤ▷ㅤ ↻
 
@@ -78,7 +78,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     }
   }
 }
-    if (command == 'play2') {
+    if (command == 'youtube') {
     try {  
     const qu = '360';
     const q = qu + 'p';
@@ -121,7 +121,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 };
 handler.help = ['play', 'play2'].map((v) => v + ' < busqueda >');
 handler.tags = ['downloader'];
-handler.command = /^(play|play2)$/i;
+handler.command = /^(play|youtube)$/i;
 
 handler.register = true
 

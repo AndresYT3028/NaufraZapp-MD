@@ -171,8 +171,6 @@ ${readMore}
 > _#logochristmas *texto*_
 > _#logocorazon *texto*_
 > _#dsowner_
-> _#gptvoz *texto*_
-> _#dall-e *texto*_
 > _#join *url grupal*_
 > _#consejo_
 > _#piropo_
@@ -197,7 +195,7 @@ ${readMore}
 > _#resetprefix_
 > _#autoadmin_
 > _#addowner *@tag*_
-> _#delowner *@tag*_
+> _#delownr *@tag*_
 > _#block *@tag*_
 > _#unblock *@tag*_
 > _#banchat_
@@ -208,7 +206,6 @@ ${readMore}
 > _#dardiamantes *@tag*_
 > _#añadirxp *@tag*_
 > _#banuser *@tag*_
-> _#cleartpm_
 > _#restart_
 > _#update_
 ╰•─────────────────•╯
@@ -245,7 +242,7 @@ ${readMore}
     conn.reply(m.chat, '> ⓘ Ocurrio un error al mostrar el menu.', m);
   }
 };
-handler.command = /^(menu|allmenu|menú|allmenú)$/i;
+handler.command = /^(menu|allmenu|menú|menucompleto|allmenú)$/i;
 handler.register = true
 handler.exp = 50;
 handler.fail = null;

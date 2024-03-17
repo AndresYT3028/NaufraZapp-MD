@@ -121,22 +121,13 @@ ${readMore}
 > _#twitter *url*_
 > _#fb *url*_
 > _#ytshort *url*_
-> _#ytmp3 *url*_
-> _#ytmp4 *url*_
-> _#ytmp3doc *url*_
-> _#ytmp4doc *url*_
-> _#videodoc *url*_
 > _#apk *texto*_
 > _#modapk *texto*_
 > _#google *texto*_
 > _#ytsearch *texto*_
 > _#playstore *texto*_
 > _#play *texto*_
-> _#play2 *texto*_
-> _#play.1 *texto*_
-> _#play.2 *texto*_
-> _#playdoc *texto*_
-> _#playdoc2 *texto*_
+> _#youtube *texto*_
 > _#playlist *texto*_
 > _#imagen *texto*_
 ╰•─────────────────•╯

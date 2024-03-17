@@ -91,7 +91,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
     }
   }
 }};
-handler.command = /^(video|fgmp4|dlmp4|getvid|yt(v|mp4)?)$/i;
+handler.command = /^(video|fgmp4|dlmp4|getvid|play(v|mp4)?)$/i;
 export default handler;
 
 function bytesToSize(bytes) {

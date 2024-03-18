@@ -70,18 +70,15 @@ ${readMore}
 > _#on *restrict*_
 > _#on *autoread*_
 > _#on *antispam*_
-> _#on *modoia*_
 > _#on *anticall*_
 > _#on *welcome*_
 > _#on *antilink2*_
 > _#on *antilink*_
 > _#on *detect*_
-> _#on *audios*_
 > _#on *autosticker*_
 > _#on *antiviewonce*_
 > _#on *antitoxic*_
 > _#on *antiarabes*_
-> _#on *antitraba*_
 > _#on *modoadmin*_
 > _#on *antidelete*_
 > _#on *public*_
@@ -92,18 +89,15 @@ ${readMore}
 > _#off *restrict*_
 > _#off *autoread*_
 > _#off *antispam*_
-> _#off *modoia*_
 > _#off *anticall*_
 > _#off *welcome*_
 > _#off *antilink2*_
 > _#off *antilink*_
 > _#off *detect*_
-> _#off *audios*_
 > _#off *autosticker*_
 > _#off *antiviewonce*_
 > _#off *antitoxic*_
 > _#off *antiarabes*_
-> _#off *antitraba*_
 > _#off *modoadmin*_
 > _#off *antidelete*_
 > _#off *public*_
@@ -167,9 +161,6 @@ ${readMore}
 > _#inspect *url grupal*_
 > _#chatgpt *texto*_
 > _#delchatgpt_
-> _#logos_
-> _#logochristmas *texto*_
-> _#logocorazon *texto*_
 > _#dsowner_
 > _#join *url grupal*_
 > _#consejo_
@@ -184,7 +175,6 @@ ${readMore}
 > _#calc_
 > _#del_
 > _#whatmusic *audio*_
-> _#styletext *texto*_
 > _#traducir *texto*_
 ╰•─────────────────•╯
 
@@ -215,7 +205,6 @@ ${readMore}
 ╠◊ •═════════════════• ◊╝
 > _#cofre_
 > _#balance_
-> _#heal_
 > _#levelup_
 > _#myns_
 > _#perfil_

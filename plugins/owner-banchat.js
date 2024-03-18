@@ -1,6 +1,6 @@
 const handler = async (m) => {
   global.db.data.chats[m.chat].isBanned = true;
-  m.reply('✅️ *Chat Baneado Con Exito, Ya No Podran Usar SakuraBotLite - MD*');
+  m.reply('> ✅ *_El chat ahora esta baneado con éxito._*');
 };
 handler.help = ['banchat'];
 handler.tags = ['owner'];

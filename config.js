@@ -14,14 +14,14 @@ global.confirmCode = ""
 // ❒═════════════════◊【 𝐎𝐖𝐍𝐄𝐑𝐀 】◊═════════════════❒
 //No toques los nuneros que contienen el "true"
 global.owner = [
- ['5493873687620', '👑 𝘾𝙧𝙚𝙖𝙙𝙤𝙧 👑', true],
- ['19145948340', '🛡️ 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿 🛡️', true],
- ['5491130362550'],
- ['51929838430'],
- ['5491164834251'],
- ['5491130288378'],
- ['5493873605231'],
- ['5491133978269']]
+ ['573022301885', '👑 𝘾𝙧𝙚𝙖𝙙𝙤𝙧 👑', true],
+ ['573105326321', '🛡️ _SHADOWTRADUCCIONES_ 🛡️', true],
+ [''],
+ [''],
+ [''],
+ [''],
+ [''],
+ ['']]
  
 // ❒═════════════════◊【 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐎𝐒 】◊═════════════════❒
 //Agregate si tu numero es owner
@@ -37,12 +37,12 @@ global.suittag = ['5493873687620'];
 global.prems = ['19145948340'];
 
 // ❒═════════════════◊【 𝐍𝐎𝐌𝐁𝐑𝐄𝐒 】◊═════════════════❒
-global.packname = '🌎 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿 🌎';
-global.author = '𝙉𝙖𝙪𝙛𝙧𝙖𝙜𝙤';
-global.wm = '👑 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿 👑';
-global.sk = '♨️ 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥 ♨️';
-global.titulowm = '🏙️ 𝙉𝙖𝙪𝙛𝙧𝙖𝘽𝙤𝙩-𝙈𝘿 🏙️';
-global.titulowm2 = `𝙉𝙖𝙪𝙛𝙧𝙖𝙜𝙤 ✨`
+global.packname = '🌎 SHADOWTRADUCCIONES 🌎';
+global.author = 'ANDRES RIVERA';
+global.wm = '👑 Shadowlust👑';
+global.sk = '♨️ SHADOW BOT ♨️';
+global.titulowm = '🏙️ ANDRES EL PAISA 🏙️';
+global.titulowm2 = `EL CAUCASIA ✨`
 global.igfg = '𝙉𝙖𝙪𝙛𝙧𝙖𝙜𝙤';
 global.wait = '*ⓘ 𝙲𝙰𝚁𝙶𝙰𝙽𝙳𝙾....*';
 global.vs = '1.5.5';
@@ -57,15 +57,15 @@ global.imagen7 = fs.readFileSync('./Menu6.jpg')
 global.imagen8 = fs.readFileSync('./Menu4.jpg')
 // ❒═════════════════◊【 𝐄𝐍𝐋𝐀𝐂𝐄𝐒 】◊═════════════════❒
 //Enlaces aleatorios del bot
-global.gp1 = 'https://chat.whatsapp.com/DMNdCYvPGnOIO5Pg8MUQoV'
-global.gp2 = 'https://www.paypal.me/ColaboracionBotOFC'
-global.gp3 = 'https://www.instagram.com/naufrazapp?igsh=Y2g1ZXJxbm53eXAy'
-global.gp4 = 'https://www.tiktok.com/@naufra.zapp?_t=8kcJigwvtji&_r=1'
-global.channel = 'https://wa.me/5493873687620'
-global.paypal = 'https://www.paypal.me/NaufragoSolano'
-global.yt = 'https://youtube.com/@user-bw5wl4ye8r?si=qN8bP4ZdKm3yXwbx'
-global.md = 'https://github.com/Bots-WhatsApp-OFC/NaufraZapp-MD'
-global.fb = 'https://www.facebook.com/share/8XyV52kz3sfhrzft/?mibextid=qi2Omg'
+global.gp1 = ''
+global.gp2 = ''
+global.gp3 = ''
+global.gp4 = ''
+global.channel = ''
+global.paypal = ''
+global.yt = ''
+global.md = ''
+global.fb = ''
 // ❒═════════════════◊【 𝐈𝐌𝐀𝐆𝐄𝐍𝐄𝐒 】◊═════════════════❒
 // ❒═════════════════◊【 𝐕𝐈𝐃𝐄𝐎𝐒 】◊═════════════════❒
 // ❒═════════════════◊【 𝐌𝐄𝐍𝐒𝐀𝐉𝐄𝐒 𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎𝐒 】◊═════════════════❒

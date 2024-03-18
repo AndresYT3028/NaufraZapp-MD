@@ -1,7 +1,7 @@
 # Código desarrollado por @gata_dios 
   
 #!/data/data/com.termux/files/usr/bin/bash 
-BOT_DIR="NaufraZapp-MD"  
+BOT_DIR="SHADOW-TRADUCCIONES"  
 BOT_REPO="https://github.com/Bots-WhatsApp-OFC/$BOT_DIR"
 DB_FILE="database.json"
  

@@ -106,9 +106,9 @@ global.loadChatgptDB = async function loadChatgptDB() {
 };
 loadChatgptDB();
 
-/* ❒═════════════════◊【 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐃𝐄 𝐌𝐄𝐓𝐎𝐃𝐎𝐒 】◊═════════════════❒ */
+/*◊════════════• ❮ INSTALACION Y CONEXIÓN ❯ •═════════════◊*/
 
-global.authFile = `BotsWhatsAppSession`;
+global.authFile = `NaufraBotSession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -121,23 +121,25 @@ const MethodMobile = process.argv.includes("mobile")
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
-//Código adaptado para la compatibilidad de ser bot con el código de 8 digitos. Hecho por: https://github.com/GataNina-Li
+// CODIGO MEJORADO POR GUARDIAN BOT MD.
 let opcion
 if (methodCodeQR) {
 opcion = '1'
 }
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
-let lineM = '══════════════════'
-opcion = await question('╔◊═════════════════════◊\n║🌎 OPCIONES DISPONIBLES 🌎\n╚◊═════════════════════◊\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> ')
+let lineM = '────────────────────────✦'
+opcion = await question('╭────────────────────────✦\n┋Seleccione las opciones que desea\n╰────────────────────────✦\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n│OPCION: 1\n│Escanea con un QR\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n│OPCION: 2\n│Código de texto de 8 dígitos\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n---> ')
 //if (fs.existsSync(`./${authFile}/creds.json`)) {
 //console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
 //process.exit()
 if (!/^[1-2]$/.test(opcion)) {
-console.log('❮🔴❯ ERROR, SELECCIONE SOLO LA OPCION 1 O 2.\n')
+console.log('⚠️ ERROR, SOLO SELECCIONA LA OPCION 1 O 2...\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
+console.info = () => {}
+console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
@@ -170,23 +172,23 @@ if (opcion === '2' || methodCode) {
 //}
 opcion = '2'
 if (!conn.authState.creds.registered) {  
-if (MethodMobile) throw new Error('❮🔴❯ No se puede usar un código de emparejamiento con la API móvil')
+if (MethodMobile) throw new Error('ⓘ No se puede usar un código de emparejamiento con la API móvil')
 
 let numeroTelefono
 if (!!phoneNumber) {
 numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.greenBright("❮🛠️❯ Comience con el código de país de su número de WhatsApp.\nEjemplo: +5493873687620\n")))
+console.log(chalk.bgBlack(chalk.bold.greenBright("ⓘ Comience con el código de país de su número de WhatsApp.\nPor ejemplo: +5493873687620\n")))
 process.exit(0)
 }} else {
 while (true) {
-numeroTelefono = await question(chalk.bgBlack(chalk.bold.cyanBright('❮🌎❯ Por favor, escriba su número de WhatsApp.\nEjemplo: +5493873687620\n')))
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.cyanBright('ⓘ Por favor, escriba o pegue su número de WhatsApp.\nPor ejemplo: +5493873687620\n')))
 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
 
 if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
 break 
 } else {
-console.log(chalk.bgBlack(chalk.bold.greenBright("❮📗❯ Por favor, escriba su número de WhatsApp.\nEjemplo: +5493873687620.\n")))
+console.log(chalk.bgBlack(chalk.bold.cyanBright("ⓘ Por favor, escriba o pegue su número de WhatsApp.\nPor ejemplo: +5493873687620.\n")))
 }}
 rl.close()  
 } 
@@ -194,7 +196,7 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            console.log(chalk.green('❮🛠️❯ introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.cyan('ⓘ introduce el código de emparejamiento en WhatsApp.'));
             console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
@@ -202,7 +204,7 @@ rl.close()
 
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`❮✅❯ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎....\n`);
+conn.logger.info(`CARGANDO...\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -215,8 +217,6 @@ if (!opts['test']) {
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
 
-
-/* ❒═════════════════◊【 𝐀𝐑𝐂𝐇𝐈𝐕𝐎𝐒 】◊═════════════════❒ */
 
 function clearTmp() {
   const tmp = [join(__dirname, './tmp')];
@@ -231,7 +231,7 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./BotsWhatsAppSession")
+let directorio = readdirSync("./NaufraBotSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
@@ -258,11 +258,11 @@ unlinkSync(`./BotsWhatsAppOFC/${directorio}/${fileInDir}`)
 })
 if (SBprekey.length === 0) return; //console.log(chalk.cyanBright(`=> No hay archivos por eliminar.`))
 } catch (err) {
-console.log(chalk.bold.red(`❮♨️❯ Algo salio mal durante la eliminación, archivos no eliminados`))
+console.log(chalk.bold.red(`ⓘ Algo salio mal durante la eliminación, archivos no eliminados`))
 }}
 
 function purgeOldFiles() {
-const directories = ['./BotsWhatsAppSession/', './BotsWhatsAppOFC/']
+const directories = ['./NaufraBotSession/', './BotsWhatsAppOFC/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -294,54 +294,54 @@ async function connectionUpdate(update) {
   if (global.db.data == null) loadDatabase();
 if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
 if (opcion == '1' || methodCodeQR) {
-    console.log(chalk.green('❮✅❯ Por favor, escanea el codigo QR.'));
+    console.log(chalk.yellow('Escanea el código QR por favor..'));
  }}
- /* ❒═════════════════◊【 𝐈𝐍𝐈𝐂𝐈𝐎 𝐘 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 】◊═════════════════❒ */
    if (connection == 'open') {
-console.log(chalk.yellowBright('\n❮✅ CONECTADO A WHATSAPP CON EXITO ✅❯\n'))
-conn.fakeReply('19145948340@s.whatsapp.net', '😃 𝙃𝙤𝙡𝙖 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿, 𝙨𝙤𝙮 𝙪𝙣 𝙣𝙪𝙚𝙫𝙤 𝙗𝙤𝙩 𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤.', '0@s.whatsapp.net', '🛡️ 𝙂𝙪𝙖𝙧𝙙𝙞𝙖𝙣𝘽𝙤𝙩-𝙈𝘿 🛡️', '0@s.whatsapp.net')
+console.log(chalk.yellowBright('\n╭──────────────────────◊\n╎✅ CONECTADO A WHATSAPP ✅\n╰──────────────────────◊\n'))
+//conn.fakeReply('5493873687620@s.whatsapp.net', '✅', '0@s.whatsapp.net', 'Hola, soy un bot nuevo.', '0@s.whatsapp.net')
  await conn.groupAcceptInvite('FqVzq74EwoL3tAA2DSGcXL');
    }
-   /* ❒═════════════════◊【 𝐄𝐑𝐑𝐎𝐑𝐄𝐒 𝐄𝐍 𝐋𝐀 𝐂𝐎𝐍𝐒𝐎𝐋𝐀 】◊═════════════════❒ */
+   /*◊════════════• ❮ MENSAJES DE REEMPLAZO ❯ •═════════════◊*/
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./BotsWhatsAppSession/" + "creds.json")
-console.log(chalk.bold.redBright(`ⓘ Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
+await fs.unlinkSync("./NaufraBotSession/" + "creds.json")
+console.log(chalk.bold.redBright(`⚠️ Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`ⓘ Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
+        conn.logger.error(`⚠️ Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
         //process.exit();
     } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`ⓘ Conexión cerrada, reconectando...`);
+        conn.logger.warn(`⚠️ Conexión cerrada, reconectando...`);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`ⓘ Conexión perdida con el servidor, reconectando...`);
+        conn.logger.warn(`⚠️ Conexión perdida con el servidor, reconectando...`);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`ⓘ Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`);
+        conn.logger.error(`⚠️ Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`);
         //process.exit();
     } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`ⓘ Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
+        conn.logger.error(`⚠️ Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
         //process.exit();
     } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`ⓘ Reinicio necesario, reinicie el servidor si presenta algún problema.`);
+        conn.logger.info(`⚠️ Reinicio necesario, reinicie el servidor si presenta algún problema.`);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`ⓘ Tiempo de conexión agotado, reconectando...`);
+        conn.logger.warn(`⚠️ Tiempo de conexión agotado, reconectando...`);
         await global.reloadHandler(true).catch(console.error);
     } else {
-        conn.logger.warn(`ⓘ Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
+        conn.logger.warn(`⚠️ Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
         await global.reloadHandler(true).catch(console.error);
     }
 }
   /*if (connection == 'close') {
-    console.log(chalk.yellow(`🦤ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
+    console.log(chalk.yellow(`🍀ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
   }*/
 }
 
 process.on('uncaughtException', console.error);
 
+/*◊════════════• ❮ MENSAJE PARA GRUPOS ❯ •═════════════◊*/
 let isInit = true;
 let handler = await import('./handler.js');
 global.reloadHandler = async function(restatConn) {
@@ -360,7 +360,6 @@ global.reloadHandler = async function(restatConn) {
     global.conn = makeWASocket(connectionOptions, {chats: oldChats});
     isInit = true;
   }
-  /* ❒═════════════════◊【 𝐍𝐎 𝐂𝐀𝐌𝐁𝐈𝐀𝐑 】◊═════════════════❒ */
   if (!isInit) {
     conn.ev.off('messages.upsert', conn.handler);
     conn.ev.off('group-participants.update', conn.participantsUpdate);
@@ -370,15 +369,15 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('connection.update', conn.connectionUpdate);
     conn.ev.off('creds.update', conn.credsUpdate);
   }
-/* ❒═════════════════◊【 𝐍𝐎𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 𝐏𝐀𝐑𝐀 𝐆𝐑𝐔𝐏𝐎𝐒 】◊═════════════════❒ */
-  conn.welcome = '> ⓘ 𝙉𝙪𝙚𝙫𝙤 𝙥𝙖𝙧𝙩𝙞𝙘𝙞𝙥𝙖𝙣𝙩𝙚 𝙚𝙣 𝙚𝙡 𝙜𝙧𝙪𝙥𝙤:\n@subject\n\n𝙃𝙤𝙡𝙖 𝙪𝙨𝙪𝙖𝙧𝙞𝙤/𝙖:\n> @user*\n> 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙞𝙙𝙤/𝙖 𝙖𝙡 𝙜𝙧𝙪𝙥𝙤.\n\n> ⓘ 𝙋𝙤𝙧 𝙛𝙖𝙫𝙤𝙧, 𝙡𝙚𝙖 𝙡𝙖 𝙙𝙚𝙨𝙘𝙧𝙞𝙥𝙘𝙞𝙤𝙣 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤.\n\n@desc\n\n*𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿*';
-  conn.bye = '> ⓘ 𝙎𝙚 𝙝𝙖 𝙞𝙙𝙤 𝙪𝙣 𝙥𝙖𝙧𝙩𝙞𝙘𝙞𝙥𝙖𝙣𝙩𝙚 𝙧𝙚𝙘𝙞𝙚𝙣𝙩𝙚𝙢𝙚𝙣𝙩𝙚:\n> @user*';
-  conn.spromote = '> ⓘ 𝙀𝙡 𝙪𝙨𝙪𝙖𝙧𝙞𝙤: @user 𝙖𝙝𝙤𝙧𝙖 𝙚𝙨 𝙖𝙙𝙢𝙞𝙣 𝙙𝙚 𝙚𝙨𝙩𝙚 𝙜𝙧𝙪𝙥𝙤.';
-  conn.sdemote = '> ⓘ 𝙀𝙡 𝙪𝙨𝙪𝙖𝙧𝙞𝙤: @user 𝙛𝙪𝙚 𝙙𝙚𝙨𝙘𝙖𝙧𝙩𝙖𝙙𝙤 𝙘𝙤𝙢𝙤 𝙖𝙙𝙢𝙞𝙣.';
-  conn.sDesc = '> ⓘ 𝙎𝙚 𝙝𝙖 𝙢𝙚𝙟𝙤𝙧𝙖𝙙𝙤 𝙡𝙖 𝙙𝙚𝙨𝙘𝙧𝙞𝙥𝙘𝙞𝙤𝙣 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤, 𝙡𝙖 𝙣𝙪𝙚𝙫𝙖 𝙙𝙚𝙨𝙘𝙧𝙞𝙥𝙘𝙞𝙤𝙣 𝙚𝙨:\n\n@desc';
-  conn.sSubject = '> ⓘ 𝙎𝙚 𝙝𝙖 𝙢𝙚𝙟𝙤𝙧𝙖𝙙𝙤 𝙚𝙡 𝙣𝙤𝙢𝙗𝙧𝙚 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤, 𝙚𝙡 𝙣𝙪𝙚𝙫𝙤 𝙣𝙤𝙢𝙗𝙧𝙚 𝙚𝙨:\n\n@subject';
-  conn.sIcon = '> ⓘ 𝙎𝙚 𝙝𝙖 𝙘𝙖𝙢𝙗𝙞𝙖𝙙𝙤 𝙡𝙖 𝙛𝙤𝙩𝙤 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤 𝙧𝙚𝙘𝙞𝙚𝙣𝙩𝙚𝙢𝙚𝙣𝙩𝙚.';
-  conn.sRevoke = '> ⓘ 𝙎𝙚 𝙝𝙖 𝙧𝙚𝙨𝙩𝙖𝙗𝙡𝙚𝙘𝙞𝙙𝙤 𝙚𝙡 𝙚𝙣𝙡𝙖𝙘𝙚 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤, 𝙚𝙡 𝙣𝙪𝙚𝙫𝙤 𝙚𝙣𝙡𝙖𝙘𝙚 𝙚𝙨:\n\n@revoke';
+
+ conn.welcome = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n👋🏻 *Hola* @user \n*bienvenido/a al grupo, disfrute su*\n*estadía.* 👍🏻\n•┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•\n> LEA ATENTAMENTE LAS REGLAS.\n•┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•\n@desc\n•┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•\n\`#menu #estado #reg #play\`';
+  conn.bye = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n👋🏻 *Adios* @user \n*esperamos que te valla bien en el*\n*día o noche.* 👍🏻\n•┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•\n\`#menu #estado #reg #play\`';
+  conn.spromote = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n> *Un/a usuario/a fue promovido/a como admin del grupo.*\n\n\`USUARIO/A:\`\n@user';
+  conn.sdemote = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n> *Un/a usuario/a fue descartado/a como admin del grupo.*\n\n\`USUARIO/A:\`\n@user';
+  conn.sDesc = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n> *Se ha cambiado la descripción del grupo.* ✨\n\n\`NUEVA DESCRIPCIÓN:\`\n@desc';
+  conn.sSubject = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n> *Se ha cambiado el nombre de este grupo.* ✨';
+  conn.sIcon = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n> *Se ha cambiado la foto de perfil del grupo.* ✨';
+  conn.sRevoke = '╭•───────────────────◊\n┆ @subject\n╰•───────────────────◊\n> *Se ha restablecido el* \`link/enlace\` *del grupo.*\n\n\`LINK /ENLACE:\`\n@revoke';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
@@ -436,7 +435,7 @@ async function filesInit(folder) {
 await filesInit(pluginFolder).then(_ => Object.keys(global.plugins)).catch(console.error);
 
 */
-
+/*◊════════════• ❮ MENSAJE DE ELIMINACIÓN ❯ •═════════════◊*/
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'));
 const pluginFilter = (filename) => /\.js$/.test(filename);
 global.plugins = {};
@@ -508,40 +507,26 @@ async function _quickTest() {
   const s = global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find};
   Object.freeze(global.support);
 }
-/* ❒═════════════════◊【 𝐍𝐎 𝐂𝐀𝐌𝐁𝐈𝐀𝐑 】◊═════════════════❒ */
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const a = await clearTmp();
-console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
+console.log(chalk.greenBright(`\n╭─────────◊ ARCHIVO ◊─────────╮\n│✅ Archivo no necesario eliminado.\n╰─────────◊ ARCHIVO ◊─────────╯\n`));
 }, 180000);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSession();
-console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
+console.log(chalk.greenBright(`\n╭─────────◊ ARCHIVO ◊─────────╮\n│✅ Archivo no necesario eliminado.\n╰─────────◊ ARCHIVO ◊─────────╯\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSessionSB();
-console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
+console.log(chalk.greenBright(`\n╭─────────◊ ARCHIVO ◊─────────╮\n│✅ Archivo no necesario eliminado.\n╰─────────◊ ARCHIVO ◊─────────╯\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeOldFiles();
-console.log(chalk.cyanBright(`\n◊═════════◊【✅ ARCHIVO INNECESARIO, ELIMINADO ✅】◊═════════◊\n`));
-}, 1000 * 60 * 60);
-setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
-  const _uptime = process.uptime() * 1000;
-  const uptime = clockString(_uptime);
-  /* ❒═════════════════◊【 𝐓𝐈𝐄𝐌𝐏𝐎 𝐃𝐄 𝐀𝐂𝐓𝐈𝐕𝐈𝐃𝐀𝐃 】◊═════════════════❒ */
-  const bio = `𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿 • ${uptime} • 𝙗𝙮 𝘉𝘰𝘵𝘴-𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱-𝘖𝘍𝘊`;
-  await conn.updateProfileStatus(bio).catch((_) => _);
-}, 60000);
-function clockString(ms) {
-  const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
-}
-_quickTest().catch(console.error);
+console.log(chalk.greenBright(`\n╭─────────◊ ARCHIVO ◊─────────╮\n│✅ Archivo no necesario eliminado.\n╰─────────◊ ARCHIVO ◊─────────╯\n`));
+}, 180000)
+_quickTest()
+.then()
+.catch(console.error)
